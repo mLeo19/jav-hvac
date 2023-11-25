@@ -3,32 +3,26 @@
 import React, {useState} from 'react'
 import ServiceCard from './ServiceCard'
 
-const Services = () => {
+const AirQualityServices = () => {
   let [services] = useState({
-    'Cooling': {
-      heading: 'Cooling Services',
-      description: 'This is our description for cooling services.',
+    'Dehumidifiers': {
+      heading: 'Dehumidifiers',
+      description: 'This is our description for dehumidifiers.',
       image: '/air-conditioner-system.jpg',
-      href: '/cooling'
+      href: 'dehumidifiers'
     },
-    'Heating': {
-      heading: 'Heating Services',
-      description: 'This is our description for heating services.',
+    'Air Purification': {
+      heading: 'Air Purification',
+      description: 'This is our description for air purification.',
       image: '/water-heater-system.jpg',
-      href: '/heating'
+      href: 'air-purification'
     },
-    'Air Quality': {
-      heading: 'Air Quality',
-      description: 'This is the description for air quality',
+    'UV Light': {
+      heading: 'UV Light',
+      description: 'This is the description for UV light services.',
       image: '/air-quality-pipes.jpg',
-      href: '/air-quality'
+      href: 'uv-light'
     },
-    'Extra Services': {
-      heading: 'Extra Services',
-      description: 'This is the description for extra services',
-      image: '/extra-services.jpg',
-      href: '/extra-services'
-    }
   })
   return (
     <div className='max-w-full bg-white'>
@@ -39,14 +33,14 @@ const Services = () => {
           100% Satisfaction Guaranteed
           </h2>
           <p className="mt-3 text-4xl font-bold tracking-tight text-gray-900">
-          Florida Experts In HVAC Services
+          Our Quality Work Leads to Quality Air
           </p>
           <p className="mt-3 text-lg leading-8 text-gray-900">
-          Learn more about our HVAC services, which are catered to both residential and commercial clients
+          Ranging from AC unit intallations to replacement and maintenance, our skills prioritize your satisfaction
           </p>
         </div>       
       </div>  
-      <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
         {Object.values(services).map((service, idx) => (
           <ServiceCard key={idx} service={service} />
         ))}
@@ -56,4 +50,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default AirQualityServices

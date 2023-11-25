@@ -6,29 +6,30 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 import Link from 'next/link'
+import NavItem from './NavItem'
 
 const navigation = [
   { name: 'Cooling', href: '/cooling', current: false , 
     submenu: [
-      {title: 'AC Repair', href: 'ac-repair', current: false},
+      {title: 'AC Repair', href: '/cooling', current: false},
       {title: 'AC Installation', href: 'ac-installation', current: false},
       {title: 'AC Maintenance', href: 'ac-maintenance', current: false}] 
   },
   { name: 'Heating', href: '/heating', current: false,
     submenu: [
-      {title: 'Heat Pump Repair', href: 'heat-pump-repair', current: false},
+      {title: 'Heat Pump Repair', href: '/heating', current: false},
       {title: 'Heat Pump Installation', href: 'heat-pump-installation', current: false},
     ]
   },
   { name: 'Air Quality', href: '/air-quality', current: false ,
     submenu: [
-      {title: 'Dehumidifier', href: 'dehumidifier', current: false},
+      {title: 'Dehumidifiers', href: '/air-quality', current: false},
       {title: 'Air Purification', href: 'air-purification', current: false},
       {title: 'UV Light', href: 'uv-light', current: false}] 
   },
-  { name: 'Extras', href: '/services', current: false ,
+  { name: 'Extras', href: '/extras', current: false ,
     submenu: [
-      {title: 'Mini Splits', href: 'mini-splits', current: false},
+      {title: 'Mini Splits', href: '/extras', current: false},
       {title: 'Refrigeration', href: 'refrigeration', current: false},
       {title: 'Smart Thermostats', href: 'smart-thermostats', current: false}]
   },
@@ -42,15 +43,15 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 fixed z-50 w-full">
+    <Disclosure as="nav" className="bg-slate-900 fixed z-50 w-full border-b border-slate-700">
       {({ open }) => (
         <>
           {/*  */}
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-20 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -60,46 +61,36 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-between ">
-                <div className="flex flex-shrink-0 items-center">
+              <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-between ">
+                <Link href='/' className="flex flex-shrink-0 items-center">
                   <Image
-                    className="h-12 lg:h-16 w-auto brightness-200"
+                    className="h-16 w-auto brightness-200"
                     src="/jav-contractors-logo.png"
                     alt="JAV Cooling"
                     width={1000}
                     height={1000}
                   />
-                </div>
-                <div className="hidden md:ml-3 lg:ml-6 md:flex items-center ">
+                </Link>
+                <div className="hidden lg:ml-6 lg:flex items-center ">
                   <div className="flex space-x-1">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm lg:text-base font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <NavItem item={item} key={item.name}/>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-                {/* Profile dropdown */}
-                <Link href="/contactUs" className='relative ml-3 hidden md:flex bg-transparent hover:bg-blue-500 font-semibold py-2 px-4 border transition ease-in-out text-sm lg:text-md text-center mr-0'>Contact Us</Link>
+                {/* Contact Us Button */}
+                <Link href="/contactUs" className='relative ml-3 hidden lg:flex bg-transparent hover:bg-blue-500 font-semibold py-2 px-4 border transition ease-in-out text-md text-center mr-0'>Contact Us</Link>
               </div>
             </div>
           </div>
 
           {/* Mobile menu dropdown */}
-          <Disclosure.Panel className="md:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+          <Disclosure.Panel className="lg:hidden">
+            <div className="space-y-1 px-3 py-2">
               {navigation.map((item, idx) => (
-                <div key={idx} className="mx-auto w-full border-2 border-white p-2 px-6">
+                <div key={idx} className="mx-auto w-full border-2 border-white py-1 px-4">
                   {item.submenu ? (
                     <>
                       <Disclosure>

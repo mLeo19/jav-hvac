@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <footer className=" bg-slate-900">
-      <div className="container px-6 py-12 mx-auto">
+      <div className="container px-6 py-12 mx-auto h-96">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <h1 className="max-w-lg text-xl font-semibold tracking-tight xl:text-2xl text-white">Subscribe to our newsletter for updates.</h1>
@@ -60,7 +60,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> 
     </footer>
   )
 }

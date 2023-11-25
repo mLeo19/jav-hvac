@@ -4,7 +4,7 @@ import DropDowns from './DropDowns'
 
 const WhyChooseUs = () => {
   return (
-    <div className='flex items-center justify-center bg-slate-50'>
+    <div className='flex items-center justify-center bg-white'>
       <div className='w-full grid grid-cols-1 md:grid-cols-2'>
         <div className='w-full h-full flex items-center justify-center p-9 lg:px-28 bg-slate-900'>
           <div className=''>
