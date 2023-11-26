@@ -29,7 +29,7 @@ export default function Hero({bg, heading, subheading}) {
           >
             +1 (561) 536 - 8433
           </Link>
-          <Link className='font-semibold leading-6 text-white text-lg md:text-xl hover:text-2xl transition-all ease-in-out' href='/contactUs'>
+          <Link className='font-semibold leading-6 text-white text-lg md:text-xl hover:text-2xl transition-all ease-in-out' href='/contact'>
             Contact Us <span aria-hidden='true'>→</span>
           </Link>
         </div>              

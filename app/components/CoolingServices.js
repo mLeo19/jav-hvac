@@ -8,19 +8,19 @@ const CoolingServices = () => {
     'AC Repair': {
       heading: 'AC Repair',
       description: 'This is our description for ac repairs.',
-      image: '/air-conditioner-system.jpg',
+      image: '/ac-repair.jpg',
       href: 'ac-repair'
     },
     'AC Installation': {
       heading: 'AC Installation',
       description: 'This is our description for AC installation.',
-      image: '/water-heater-system.jpg',
+      image: '/ac-installation.jpg',
       href: 'ac-installation'
     },
     'AC Maintenance': {
       heading: 'AC Maintenance',
       description: 'This is the description for AC maintenance.',
-      image: '/air-quality-pipes.jpg',
+      image: '/ac-maintenance.jpg',
       href: 'ac-maintenance'
     },
   })

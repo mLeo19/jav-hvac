@@ -62,7 +62,24 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-between ">
-                <Link href='/' className="flex flex-shrink-0 items-center">
+                {open ? (
+                  <Disclosure.Button
+                  as="a"
+                  href='/'
+                  className={classNames(
+                  'flex flex-shrink-0 items-center transition-all ease-in-out'
+                  )}
+                >
+                  <Image
+                    className="h-16 w-auto brightness-200"
+                    src="/jav-contractors-logo.png"
+                    alt="JAV Cooling"
+                    width={1000}
+                    height={1000}
+                  />
+                </Disclosure.Button>
+                ) : (
+                  <Link href='/' className="flex flex-shrink-0 items-center transition-all ease-in-out">
                   <Image
                     className="h-16 w-auto brightness-200"
                     src="/jav-contractors-logo.png"
@@ -71,6 +88,8 @@ export default function Navbar() {
                     height={1000}
                   />
                 </Link>
+                )}
+                
                 <div className="hidden lg:ml-6 lg:flex items-center ">
                   <div className="flex space-x-1">
                     {navigation.map((item) => (
@@ -81,7 +100,7 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
                 {/* Contact Us Button */}
-                <Link href="/contactUs" className='relative ml-3 hidden lg:flex bg-transparent hover:bg-blue-500 font-semibold py-2 px-4 border transition ease-in-out text-md text-center mr-0'>Contact Us</Link>
+                <Link href="/contact" className='relative ml-3 hidden lg:flex bg-transparent hover:bg-blue-500 font-semibold py-2 px-4 border transition ease-in-out text-md text-center mr-0'>Contact Us</Link>
               </div>
             </div>
           </div>
@@ -125,7 +144,19 @@ export default function Navbar() {
                       </Disclosure>
                     </>
                   ) : (
-                    <Link key={idx} href={item.href} className='flex w-full justify-between px-4 py-2 text-left text-base font-medium text-white'>{item.name}</Link>
+                    
+                    <Disclosure.Button
+                      key={idx}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current ? 'bg-gray-900 text-white' : 'text-white',
+                        'flex w-full justify-between px-4 py-2 text-left text-base font-medium text-white'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
                   )}              
                 </div>
                 /* // TODO: Include Disclosure Within Disclosure
@@ -143,6 +174,17 @@ export default function Navbar() {
                 </Disclosure.Button>
                 */
               ))}
+              <div className='flex justify-center items-center'>
+              <Disclosure.Button
+                as="a"
+                href='/contact'
+                className={classNames(
+                'my-2 relative flex bg-transparent hover:bg-blue-500 font-semibold py-2 px-4 border-2 transition ease-in-out text-md text-center mr-0'
+                )}
+              >
+                Contact Us
+              </Disclosure.Button>
+              </div>
             </div>
           </Disclosure.Panel>
         </>

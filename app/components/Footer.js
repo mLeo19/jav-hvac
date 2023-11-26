@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <footer className=" bg-slate-900">
-      <div className="container px-6 py-12 mx-auto h-96">
+      <div className="container px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <h1 className="max-w-lg text-xl font-semibold tracking-tight xl:text-2xl text-white">Subscribe to our newsletter for updates.</h1>
@@ -20,8 +20,8 @@ const Footer = () => {
             <div className="flex flex-col items-start mt-5 space-y-2">
               <a href="/cooling" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Cooling</a>
               <a href="/heating" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Heating</a>
-              <a href="/airQuality" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Air Quality</a>
-              <a href="/services" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Extra Services</a>
+              <a href="/air-quality" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Air Quality</a>
+              <a href="/extras" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Extra Services</a>
               <a href="/financing" className="transition-colors duration-300 text-gray-300 hover:text-blue-400 hover:underline">Financing</a>
             </div>
           </div>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 md:my-8 border-gray-700" />
         <div className="flex items-center justify-between">
-          <a href="#">
+          <a href="/">
             <Image className="w-auto brightness-200 h-16" src="/jav-contractors-logo.png" alt="" height={700} width={700} />
           </a>
           <div className="flex -mx-2">

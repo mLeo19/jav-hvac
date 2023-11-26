@@ -4,7 +4,9 @@ import AirQualityServices from '../components/AirQualityServices'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Testimonials from '../components/Testimonials'
 import LogoCloud from '../components/LogoCloud'
-
+import Info from '../components/Info'
+import { PiToolboxFill } from 'react-icons/pi'
+import { MdRoofing, MdHvac } from 'react-icons/md'
 
 const AirQuality = () => {
   const testimonials = [
@@ -27,10 +29,35 @@ const AirQuality = () => {
       role: 'SE Restoration'
     }
   ]
+
+  let heading = 'Florida\'s Premier Air Quality Solutions'
+  let title = 'Efficient Air Quality Services for West Palm Beach and Beyond'
+  let desc = 'Our expert team ensures optimal performance and comfort, extending our services from West Palm Beach to cities across the state.'
+  let img = '/uv-light.jpg'
+
+  const features = [
+    {
+      name: 'Precision Performance by Tech Pros',
+      description: 'Our certified technicians guarantee precision in installing, maintaining, and repairing HVAC systems, ensuring peak performance and energy efficiency.',
+      icon: PiToolboxFill,
+    },
+    {
+      name: 'Climate Mastery with Tailored Solutions',
+      description: 'We specialize in crafting personalized cooling solutions, understanding the unique demands of Florida\'s climate to keep your indoor environment consistently comfortable.',
+      icon: MdRoofing,
+    },
+    {
+      name: 'Reliability You Can Trust',
+      description: 'Count on us for reliable, prompt service. From routine maintenance to emergency repairs, we\'re dedicated to ensuring your HVAC system operates seamlessly year-round.',
+      icon: MdHvac,
+    },
+  ]
+
   return (
     <div>
-      <Hero bg='/air-quality-pipes.jpg' heading='Air Conditioning Services' subheading='Hire HVAC Experts That Can Meet All Your Air Conditioning Needs'/>
+      <Hero bg='/air-quality-pipes.jpg' heading='Air Quality Services' subheading='Hire HVAC Experts That Can Meet All Your Air Quality Needs'/>
       <AirQualityServices />
+      <Info heading={heading} title={title} desc={desc} features={features} img={img} />
       <WhyChooseUs />
       <LogoCloud />
       <Testimonials testimonials={testimonials} />

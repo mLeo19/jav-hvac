@@ -8,19 +8,19 @@ const ExtraServices = () => {
     'Mini Splits': {
       heading: 'Mini Splits',
       description: 'This is our description for mini splits.',
-      image: '/air-conditioner-system.jpg',
+      image: '/mini-splits.jpg',
       href: 'mini-splits'
     },
     'Refrigeration': {
       heading: 'Refrigeration',
       description: 'This is our description for refrigeration.',
-      image: '/water-heater-system.jpg',
+      image: '/refrigeration.jpg',
       href: 'refrigeration'
     },
     'Smart Thermostats': {
         heading: 'Smart Thermostats',
         description: 'This is our description for heat smart thermostats.',
-        image: '/water-heater-system.jpg',
+        image: '/smart-thermostats.jpg',
         href: 'smart-thermostats'
       },
   })

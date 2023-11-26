@@ -4,6 +4,9 @@ import ExtraServices from '../components/ExtraServices'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Testimonials from '../components/Testimonials'
 import LogoCloud from '../components/LogoCloud'
+import Info from '../components/Info'
+import { PiToolboxFill } from 'react-icons/pi'
+import { MdRoofing, MdHvac } from 'react-icons/md'
 
 const Extras = () => {
   const testimonials = [
@@ -26,13 +29,38 @@ const Extras = () => {
       role: 'SE Restoration'
     }
   ]
+
+  let heading = 'Florida\'s Premier HVAC Solutions'
+  let title = 'Efficient HVAC Services for West Palm Beach and Beyond'
+  let desc = 'Our expert team ensures optimal performance and comfort, extending our services from West Palm Beach to cities across the state.'
+  let img = '/mini-splits.jpg'
+
+  const features = [
+    {
+      name: 'Precision Performance by Tech Pros',
+      description: 'Our certified technicians guarantee precision in installing, maintaining, and repairing HVAC systems, ensuring peak performance and energy efficiency.',
+      icon: PiToolboxFill,
+    },
+    {
+      name: 'Climate Mastery with Tailored Solutions',
+      description: 'We specialize in crafting personalized cooling solutions, understanding the unique demands of Florida\'s climate to keep your indoor environment consistently comfortable.',
+      icon: MdRoofing,
+    },
+    {
+      name: 'Reliability You Can Trust',
+      description: 'Count on us for reliable, prompt service. From routine maintenance to emergency repairs, we\'re dedicated to ensuring your HVAC system operates seamlessly year-round.',
+      icon: MdHvac,
+    },
+  ]
+
   return (
     <div>
-      <Hero bg='/water-heater-system.jpg' heading='Heating Services' subheading='Hire Experts in Heating Systems'  />
+      <Hero bg='/extra-services.jpg' heading='Extra Services' subheading='Hire Versatile Experts For Any HVAC Needs'  />
       <ExtraServices />
+      <Info heading={heading} title={title} desc={desc} features={features} img={img} />
       <WhyChooseUs />
       <LogoCloud />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials testimonials={testimonials} />  
     </div>
   )
 }

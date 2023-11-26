@@ -8,19 +8,19 @@ const AirQualityServices = () => {
     'Dehumidifiers': {
       heading: 'Dehumidifiers',
       description: 'This is our description for dehumidifiers.',
-      image: '/air-conditioner-system.jpg',
+      image: '/dehumidifier.webp',
       href: 'dehumidifiers'
     },
     'Air Purification': {
       heading: 'Air Purification',
       description: 'This is our description for air purification.',
-      image: '/water-heater-system.jpg',
+      image: '/air-purification.jpg',
       href: 'air-purification'
     },
     'UV Light': {
       heading: 'UV Light',
       description: 'This is the description for UV light services.',
-      image: '/air-quality-pipes.jpg',
+      image: '/uv-light.jpg',
       href: 'uv-light'
     },
   })
@@ -36,7 +36,7 @@ const AirQualityServices = () => {
           Our Quality Work Leads to Quality Air
           </p>
           <p className="mt-3 text-lg leading-8 text-gray-900">
-          Ranging from AC unit intallations to replacement and maintenance, our skills prioritize your satisfaction
+          Ranging from air purification to HVAC UV lights, our skills prioritize your satisfaction
           </p>
         </div>       
       </div>  

@@ -8,13 +8,13 @@ const HeatingServices = () => {
     'Heat Pump Repair': {
       heading: 'Heat Pump Repair',
       description: 'This is our description for heat pump repairs.',
-      image: '/air-conditioner-system.jpg',
+      image: '/heat-pump-repair.jpeg',
       href: 'heat-pump-repair'
     },
     'Heat Pump Installation': {
       heading: 'Heat Pump Installation',
       description: 'This is our description for heat pump installation.',
-      image: '/water-heater-system.jpg',
+      image: '/heat-pump-installation.JPG',
       href: 'heat-pump-installation'
     },
   })
@@ -27,10 +27,10 @@ const HeatingServices = () => {
           100% Satisfaction Guaranteed
           </h2>
           <p className="mt-3 text-4xl font-bold tracking-tight text-gray-900">
-          Seasoned Experts in Air Conditioning Solutions
+          Seasoned Experts in Heating Solutions
           </p>
           <p className="mt-3 text-lg leading-8 text-gray-900">
-          Ranging from AC unit intallations to replacement and maintenance, our skills prioritize your satisfaction
+          Ranging from heat pump repair to installations, our skills prioritize your satisfaction
           </p>
         </div>       
       </div>  
