@@ -23,13 +23,13 @@ export default function Hero({bg, heading, subheading}) {
           {heading}
         </h1>
         <p className='mt-6 px-10 text-xl md:text-2xl font-bold drop-shadow-lg flex justify-center text-center leading-8 text-blue-500 opacity-90'>{subheading}</p>
-        <div className='mt-10 flex items-center justify-center gap-x-6'>
+        <div className='mt-10 flex flex-col sm:flex-row gap-y-4 items-center justify-center gap-x-6'>
           <Link className='bg-transparent leading-8 hover:bg-blue-500 text-white hover:text-white font-semibold py-2 px-4 border border-white shadow-xl transition ease-in-out text-lg md:text-xl'
             href="tel:+15615368433"
           >
             +1 (561) 536 - 8433
           </Link>
-          <Link className='font-semibold leading-6 text-white text-lg md:text-xl hover:text-2xl transition-all ease-in-out' href='/contact'>
+          <Link className='font-semibold leading-6 text-white text-xl hover:text-2xl transition-all ease-in-out' href='/contact'>
             Contact Us <span aria-hidden='true'>→</span>
           </Link>
         </div>              

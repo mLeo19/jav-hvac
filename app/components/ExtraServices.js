@@ -7,26 +7,26 @@ const ExtraServices = () => {
   let [services] = useState({
     'Mini Splits': {
       heading: 'Mini Splits',
-      description: 'This is our description for mini splits.',
+      description: 'Explore the flexibility of mini-split systems for personalized comfort in specific areas of your home or office. Our mini-split services include installation and maintenance, offering efficient heating and cooling solutions with minimal impact on your space.',
       image: '/mini-splits.jpg',
       href: 'mini-splits'
     },
     'Refrigeration': {
       heading: 'Refrigeration',
-      description: 'This is our description for refrigeration.',
+      description: 'Ensure the proper functioning of your refrigeration systems with our expert services. From installation of commercial refrigeration units to regular maintenance, we keep your systems running smoothly for optimal cooling and preservation.',
       image: '/refrigeration.jpg',
       href: 'refrigeration'
     },
     'Smart Thermostats': {
         heading: 'Smart Thermostats',
-        description: 'This is our description for heat smart thermostats.',
+        description: 'Embrace energy efficiency and convenience with our smart thermostat installations. Take control of your HVAC system remotely, optimize temperature settings, and reduce energy costs with cutting-edge smart thermostat technology.',
         image: '/smart-thermostats.jpg',
         href: 'smart-thermostats'
       },
   })
   return (
     <div className='max-w-full bg-white'>
-    <div className='max-w-2xl mx-auto py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <div className='max-w-2xl mx-auto py-16 px-6 lg:max-w-7xl lg:px-8'>
       <div className='flex items-center justify-center'>
         <div className='sm:text-center'>
           <h2 className="text-lg lg:text-xl font-semibold leading-7 text-blue-500">

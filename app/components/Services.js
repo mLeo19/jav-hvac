@@ -7,32 +7,32 @@ const Services = () => {
   let [services] = useState({
     'Cooling': {
       heading: 'Cooling Services',
-      description: 'This is our description for cooling services.',
+      description: 'Ensure optimal comfort during warm seasons with our top-notch cooling solutions. From air conditioning installations to regular maintenance, we guarantee a cool and refreshing indoor environment.',
       image: '/air-conditioner-system.jpg',
       href: '/cooling'
     },
     'Heating': {
       heading: 'Heating Services',
-      description: 'This is our description for heating services.',
+      description: 'Stay warm and cozy in colder months with our expert heating services. Whether it\'s furnace installations, heat pump repairs, or efficient maintenance, we\'ve got your heating needs covered.',
       image: '/water-heater-system.jpg',
       href: '/heating'
     },
     'Air Quality': {
       heading: 'Air Quality',
-      description: 'This is the description for air quality',
+      description: 'Breathe easy with our comprehensive air quality services. We offer solutions to enhance indoor air, including air purifier installations, duct cleaning, and ventilation system improvements for a healthier living or working space.',
       image: '/air-quality-pipes.jpg',
       href: '/air-quality'
     },
     'Extra Services': {
       heading: 'Extra Services',
-      description: 'This is the description for extra services',
+      description: 'Beyond the basics, explore our additional services tailored to meet specific HVAC requirements. From energy efficiency consultations to smart thermostat installations, we provide a range of solutions to optimize your indoor environment.',
       image: '/extra-services.jpg',
       href: '/extra-services'
     }
   })
   return (
     <div className='max-w-full bg-white'>
-    <div className='max-w-2xl mx-auto py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <div className='max-w-2xl mx-auto py-16 px-6 lg:max-w-7xl lg:px-8'>
       <div className='flex items-center justify-center pb-8'>
         <div className='sm:text-center'>
           <h2 className="text-lg lg:text-xl font-semibold leading-7 text-blue-500">

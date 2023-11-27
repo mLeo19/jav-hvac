@@ -7,26 +7,26 @@ const AirQualityServices = () => {
   let [services] = useState({
     'Dehumidifiers': {
       heading: 'Dehumidifiers',
-      description: 'This is our description for dehumidifiers.',
+      description: 'Create a healthier indoor environment by controlling excess humidity with our dehumidifier solutions. We offer installation and maintenance services to keep humidity levels in check, promoting comfort and preventing mold and mildew growth.',
       image: '/dehumidifier.webp',
       href: 'dehumidifiers'
     },
     'Air Purification': {
       heading: 'Air Purification',
-      description: 'This is our description for air purification.',
+      description: 'Breathe cleaner air with our air purification services. We provide installation of advanced air purifiers to remove contaminants, allergens, and pollutants, ensuring your indoor air is fresh and safe for everyone.',
       image: '/air-purification.jpg',
       href: 'air-purification'
     },
     'UV Light': {
       heading: 'UV Light',
-      description: 'This is the description for UV light services.',
+      description: 'Enhance your indoor air quality with UV light installations. Our UV light solutions help eliminate airborne bacteria and viruses, providing an extra layer of protection for a healthier living or working space.',
       image: '/uv-light.jpg',
       href: 'uv-light'
     },
   })
   return (
     <div className='max-w-full bg-white'>
-    <div className='max-w-2xl mx-auto py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <div className='max-w-2xl mx-auto py-16 px-6 lg:max-w-7xl lg:px-8'>
       <div className='flex items-center justify-center pb-8'>
         <div className='sm:text-center'>
           <h2 className="text-lg lg:text-xl font-semibold leading-7 text-blue-500">

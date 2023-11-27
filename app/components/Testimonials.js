@@ -7,7 +7,7 @@ import { Transition } from '@headlessui/react'
 export default function Testimonials({ testimonials }) {
   const testimonialsRef = useRef(null)
   const [active, setActive] = useState(0)
-  const [autorotate, setAutorotate] = useState(true)
+  const [autorotate, setAutorotate] = useState(false)
   const autorotateTiming = 7000
 
   useEffect(() => {

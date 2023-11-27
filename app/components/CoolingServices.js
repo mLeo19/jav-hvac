@@ -7,26 +7,26 @@ const CoolingServices = () => {
   let [services] = useState({
     'AC Repair': {
       heading: 'AC Repair',
-      description: 'This is our description for ac repairs.',
+      description: 'Experience swift and reliable air conditioning repair services to address any cooling issues. Our skilled technicians are equipped to diagnose and fix AC problems efficiently, ensuring your system runs smoothly and efficiently.',
       image: '/ac-repair.jpg',
       href: 'ac-repair'
     },
     'AC Installation': {
       heading: 'AC Installation',
-      description: 'This is our description for AC installation.',
+      description: 'Trust our experts for seamless air conditioning installations tailored to your space. Whether it\'s a new construction project or an upgrade, we deliver precise and professional AC installations to keep your indoor environment comfortably cool.',
       image: '/ac-installation.jpg',
       href: 'ac-installation'
     },
     'AC Maintenance': {
       heading: 'AC Maintenance',
-      description: 'This is the description for AC maintenance.',
+      description: 'Extend the life and efficiency of your air conditioning system with our thorough maintenance services. From routine check-ups to proactive adjustments, our maintenance programs are designed to prevent issues and keep your AC unit performing at its best.',
       image: '/ac-maintenance.jpg',
       href: 'ac-maintenance'
     },
   })
   return (
     <div className='max-w-full bg-white'>
-    <div className='max-w-2xl mx-auto py-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
+    <div className='max-w-2xl mx-auto py-16 px-6 lg:max-w-7xl lg:px-8'>
       <div className='flex items-center justify-center pb-8'>
         <div className='sm:text-center'>
           <h2 className="text-lg lg:text-xl font-semibold leading-7 text-blue-500">

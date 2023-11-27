@@ -28,7 +28,7 @@ const ServiceCard = ({ service }) => {
         />
       </div>
       <h3 className="mt-4 text-base text-gray-700 text-center">{service.heading}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900 text-center">{service.description}</p>
+      <p className="mt-1 text-lg font-medium text-gray-900">{service.description}</p>
     </a>
   )
 }
