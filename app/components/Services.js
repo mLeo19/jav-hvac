@@ -25,7 +25,7 @@ const Services = () => {
     },
     'Extra Services': {
       heading: 'Extra Services',
-      description: 'Beyond the basics, explore our additional services tailored to meet specific HVAC requirements. From energy efficiency consultations to smart thermostat installations, we provide a range of solutions to optimize your indoor environment.',
+      description: 'Beyond the basics, explore our additional services tailored to meet specific HVAC requirements. From mini-splits and refrigeration to smart thermostat installations, we provide a range of solutions to optimize your indoor environment.',
       image: '/extra-services.jpg',
       href: '/extra-services'
     }

@@ -12,6 +12,13 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        quicksand: ['var(--font-quicksand)'],
+        lora: ['var(--font-lora)'],
+        playfair: ['var(--font-playfair)'],
+        eb_garamond: ['var(--font-eb_garamond)'],
+      },
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
