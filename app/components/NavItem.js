@@ -91,7 +91,31 @@ const NavItem = ({item}) => {
                             </div>
                           </a>
                         ))}
+                        <a
+                          href={item.href}
+                          className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
+                        >
+                          <div className='ml-4'>
+                            <p className="text-sm font-medium text-white">
+                              View All <span aria-hidden='true'>→</span>
+                            </p>
+                          </div>
+                        </a>
                       </div>
+                      {/*
+                      <div className="relative border border-slate-500 bg-slate-700 p-7">
+                        <a
+                          href={item.href}
+                          className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
+                        >
+                          <div className='ml-4'>
+                            <p className="text-sm font-medium text-white">
+                              View All
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                      */}
                     </div>
                   </Popover.Panel>
                 </Transition>

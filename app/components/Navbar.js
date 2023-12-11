@@ -11,27 +11,27 @@ import NavItem from './NavItem'
 const navigation = [
   { name: 'Cooling', href: '/cooling', current: false , 
     submenu: [
-      {title: 'AC Repair', href: '/cooling', current: false},
-      {title: 'AC Installation', href: 'ac-installation', current: false},
-      {title: 'AC Maintenance', href: 'ac-maintenance', current: false}] 
+      {title: 'AC Repair', href: '/cooling/ac-repair', current: false},
+      {title: 'AC Installation', href: '/cooling/ac-installation', current: false},
+      {title: 'AC Maintenance', href: '/cooling/ac-maintenance', current: false}] 
   },
   { name: 'Heating', href: '/heating', current: false,
     submenu: [
-      {title: 'Heat Pump Repair', href: '/heating', current: false},
-      {title: 'Heat Pump Installation', href: 'heat-pump-installation', current: false},
+      {title: 'Heat Pump Repair', href: '/heating/heat-pump-repair', current: false},
+      {title: 'Heat Pump Installation', href: '/heating/heat-pump-installation', current: false},
     ]
   },
   { name: 'Air Quality', href: '/air-quality', current: false ,
     submenu: [
-      {title: 'Dehumidifiers', href: '/air-quality', current: false},
-      {title: 'Air Purification', href: 'air-purification', current: false},
-      {title: 'UV Light', href: 'uv-light', current: false}] 
+      {title: 'Dehumidifiers', href: '/air-quality/dehumidifiers', current: false},
+      {title: 'Air Purification', href: '/air-quality/air-purification', current: false},
+      {title: 'UV Light', href: '/air-quality/uv-light', current: false}] 
   },
   { name: 'Extras', href: '/extras', current: false ,
     submenu: [
-      {title: 'Mini Splits', href: '/extras', current: false},
-      {title: 'Refrigeration', href: 'refrigeration', current: false},
-      {title: 'Smart Thermostats', href: 'smart-thermostats', current: false}]
+      {title: 'Mini Splits', href: '/extras/mini-splits', current: false},
+      {title: 'Refrigeration', href: '/extras/refrigeration', current: false},
+      {title: 'Smart Thermostats', href: '/extras/smart-thermostats', current: false}]
   },
   { name: 'About', href: '/about', current: false },
   { name: 'Financing', href: '/financing', current: false },
@@ -46,7 +46,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-slate-900 fixed z-50 w-full border-b border-slate-700">
       {({ open }) => (
         <>
-          {/*  */}
+          {/* TODO: Fix overflow scroll when opening all panels on mobile menu; DONE with a fixed height of 420px */}
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
@@ -88,7 +88,7 @@ export default function Navbar() {
 
           {/* Mobile menu dropdown */}
           <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 px-3 py-2">
+            <div className="space-y-1 px-3 py-2 h-[420px] max-h-full overflow-auto">
               {navigation.map((item, idx) => (
                 <div key={idx} className="mx-auto w-full border-2 border-white py-1 px-4">
                   {item.submenu ? (
@@ -107,18 +107,29 @@ export default function Navbar() {
                             <Disclosure.Panel className="border-t-2 border-white px-4 py-1 text-sm text-white">
                               {item.submenu.map((subItem, subIdx) => (
                                 <Disclosure.Button
-                                key={subIdx}
-                                as="a"
-                                href={subItem.href}
-                                className={classNames(
-                                  subItem.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                  'block rounded-md px-3 py-2 text-base font-medium'
-                                )}
-                                aria-current={subItem.current ? 'page' : undefined}
-                              >
-                                {subItem.title}
-                              </Disclosure.Button>
-                              ))}
+                                  key={subIdx}
+                                  as="a"
+                                  href={subItem.href}
+                                  className={classNames(
+                                    subItem.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                    'block rounded-md px-3 py-2 text-base font-medium'
+                                  )}
+                                  aria-current={subItem.current ? 'page' : undefined}
+                                >
+                                  {subItem.title}
+                                </Disclosure.Button>
+                                ))}
+                                <Disclosure.Button
+                                  as='a'
+                                  href={item.href}
+                                  className={classNames(
+                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                    'block rounded-md px-3 py-2 text-base font-medium'
+                                  )}
+                                  aria-current={item.current ? 'page' : undefined}
+                                >
+                                  View All <span aria-hidden='true'>→</span>
+                                </Disclosure.Button>
                             </Disclosure.Panel>
                           </>
                         )}

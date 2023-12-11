@@ -43,7 +43,7 @@ const eb_garamond = EB_Garamond({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${quicksand.variable} ${lora.variable} ${playfair.variable} ${eb_garamond.variable}`}>
-      <body className='font-eb_garamond'>
+      <body className='font-quicksand'>
         <Navbar />
         {children}
         <Footer />
