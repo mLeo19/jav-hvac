@@ -3,6 +3,8 @@ import './globals.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Navbar2 from './components/Navbar2'
+import ThemeContextProvider from './context/ThemeContext'
+import ThemeSwitch from './components/ThemeSwitch'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,10 +45,13 @@ const eb_garamond = EB_Garamond({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${quicksand.variable} ${lora.variable} ${playfair.variable} ${eb_garamond.variable}`}>
-      <body className='font-quicksand'>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className='font-inter bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90'>
+        <ThemeContextProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <ThemeSwitch />
+        </ThemeContextProvider>
       </body>
     </html>
   )

@@ -16,7 +16,7 @@ export default function DropDowns() {
                   } h-5 w-5 text-blue-500`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4  pb-2 text-md sm:text-lg text-black">
+              <Disclosure.Panel className="px-4  pb-2 text-md sm:text-lg text-gray-900 dark:text-gray-50">
               Immerse yourself in unparalleled service excellence. We prioritize your satisfaction, delivering top-tier solutions with meticulous attention to detail.
               </Disclosure.Panel>
             </>
@@ -33,7 +33,7 @@ export default function DropDowns() {
                   } h-5 w-5 text-blue-500`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4  pb-2 text-md sm:text-lg text-black">
+              <Disclosure.Panel className="px-4  pb-2 text-md sm:text-lg text-gray-900 dark:text-gray-50">
               We believe in openness and honesty, ensuring you understand and appreciate the value of our services from the initial quote to the completion of every project.
               </Disclosure.Panel>
             </>
@@ -50,7 +50,7 @@ export default function DropDowns() {
                   } h-5 w-5 text-blue-500`}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-4  pb-2 text-md sm:text-lg text-black">
+              <Disclosure.Panel className="px-4  pb-2 text-md sm:text-lg text-gray-900 dark:text-gray-50">
               We bring innovation to your doorstep, ensuring your spaces are not just comfortable but also equipped with cutting-edge solutions that embrace the future of climate control.
               </Disclosure.Panel>
             </>

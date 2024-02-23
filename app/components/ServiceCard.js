@@ -27,8 +27,8 @@ const ServiceCard = ({ service }) => {
           onLoad={() => setLoading(false)}
         />
       </div>
-      <h3 className="mt-4 text-base text-gray-700 text-center">{service.heading}</h3>
-      <p className="mt-1 text-lg font-medium text-gray-900">{service.description}</p>
+      <h3 className="mt-4 text-base text-gray-700 dark:text-white font-bold text-center">{service.heading}</h3>
+      <p className="mt-1 text-lg font-medium text-gray-900 dark:text-gray-200">{service.description}</p>
     </a>
   )
 }

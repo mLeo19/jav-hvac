@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { Transition } from '@headlessui/react'
+import { motion } from "framer-motion"
 
 export default function Testimonials({ testimonials }) {
   const testimonialsRef = useRef(null)
@@ -27,8 +28,22 @@ export default function Testimonials({ testimonials }) {
   }, [])  
 
   return (
-    <div className='w-full  py-16 bg-slate-900'>
-    <div className="w-full relative  max-w-3xl mx-auto text-center px-4 sm:px-8 md:px-16">
+    <div className='w-full  py-16 bg-slate-50 dark:bg-slate-900'>
+    <motion.div
+      className="w-full relative  max-w-3xl mx-auto text-center px-4 sm:px-8 md:px-16"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       {/* Testimonial image */}
       <div className="relative h-32">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-b before:from-blue-500/75 before:via-blue-500/5 before:via-25% before:to-blue-500/0 before:to-75% before:rounded-full before:-z-10">
@@ -69,7 +84,7 @@ export default function Testimonials({ testimonials }) {
               leaveTo="opacity-0 translate-x-4"
               beforeEnter={() => heightFix()}
             >
-              <div className="text-2xl font-bold text-white before:content-['\201C'] after:content-['\201D']">{testimonial.quote}</div>
+              <div className="text-2xl font-bold text-gray-900 dark:text-white before:content-['\201C'] after:content-['\201D']">{testimonial.quote}</div>
             </Transition>
           ))}
 
@@ -89,7 +104,7 @@ export default function Testimonials({ testimonials }) {
         ))}
 
       </div>
-    </div>
+    </motion.div>
     </div>
   )
 }

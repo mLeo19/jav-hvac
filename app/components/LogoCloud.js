@@ -4,7 +4,7 @@ import Image from 'next/image'
 const LogoCloud = () => {
   return (
     <div>
-      <div className="bg-white  pt-12 pb-6 px-4 ">
+      <div className="bg-gray-50 pt-12 pb-6 px-4 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="my-0 text-center text-lg font-semibold leading-8 text-gray-900">
           Trusted by the most innovative teams in the field!

@@ -35,11 +35,7 @@ const NavItem = ({item}) => {
     }
   return (
     <div
-      className={classNames(
-        item.current ? 'bg-gray-900 text-white' : 'text-white',
-          'px-3 py-2 text-sm lg:text-base font-medium'
-      )}
-      aria-current={item.current ? 'page' : undefined}
+      className='px-3 py-2 text-sm lg:text-base font-medium'
     >
       {item.submenu ? (
         <>
@@ -58,7 +54,7 @@ const NavItem = ({item}) => {
                   <span className=''>{item.name}</span>
                   <BsChevronDown
                     className={`${open ? "" : "text-opacity-70"}
-                     ml-1 h-5 w-5 `}
+                     ml-1 h-4 w-4 `}
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -77,15 +73,15 @@ const NavItem = ({item}) => {
                       onMouseEnter={onMouseEnter.bind(null, open)}
                       onMouseLeave={onMouseLeave.bind(null, open)}
                     >
-                      <div className="relative grid gap-8 border border-slate-700 bg-slate-900 p-7 lg:grid-cols-1">
+                      <div className="relative grid gap-8 border dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-7 lg:grid-cols-1">
                         {item.submenu.map((subItem) => (
                           <a
                             key={subItem.title}
                             href={subItem.href}
-                            className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
+                            className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
                           >
-                            <div className="ml-4">
-                              <p className="text-sm font-medium text-white">
+                            <div className="mx-4">
+                              <p className="text-sm font-medium dark:text-white">
                                 {subItem.title}
                               </p>
                             </div>
@@ -93,10 +89,10 @@ const NavItem = ({item}) => {
                         ))}
                         <a
                           href={item.href}
-                          className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
+                          className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
                         >
-                          <div className='ml-4'>
-                            <p className="text-sm font-medium text-white">
+                          <div className='mx-4'>
+                            <p className="text-sm font-medium dark:text-white">
                               View All <span aria-hidden='true'>→</span>
                             </p>
                           </div>
@@ -125,7 +121,11 @@ const NavItem = ({item}) => {
           </Popover>
         </>
       ) : (
-        <Link className="inline-flex items-center bg-transparent text-base font-medium py-2 focus:outline-none transition duration-150 ease-in-out hover:text-blue-700" href={item.href}>{item.name}</Link>
+        <Link
+          className="inline-flex items-center bg-transparent text-base font-medium py-2 focus:outline-none transition duration-150 ease-in-out hover:text-blue-700" 
+          href={item.href}>
+            {item.name}
+        </Link>
       )}
     </div>
   )
