@@ -4,13 +4,21 @@ import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import { FaPhoneAlt } from "react-icons/fa";
+import { useRef } from "react"
 
 export default function Hero({bg, heading, subheading}) {
   // TODO: Fix parallax
-  let {scrollY} = useScroll();
-  let y = useTransform(scrollY, [0, 850], ["0%", "100%"]);
+  let ref = useRef(null);
+  let {scrollYProgress} = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
-    <div className="relative w-full h-screen flex justify-center items-center overflow-hidden bg-black">
+    <div
+      ref={ref}
+      className="relative w-full h-screen flex justify-center items-center overflow-hidden bg-black"
+    >
       <motion.div style={{y}} className='absolute top-0 left-0 right-0 bottom-0' >
         <Image
           src={bg}
