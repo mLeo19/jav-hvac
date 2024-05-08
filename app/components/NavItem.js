@@ -1,8 +1,18 @@
 import React from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import { Popover, Transition, PopoverButton, PopoverPanel, CloseButton, useClose } from '@headlessui/react'
 import { BsChevronDown } from 'react-icons/bs'
 import { Fragment, useRef } from 'react'
 import Link from 'next/link'
+import { forwardRef } from 'react'
+
+const MyLink = forwardRef((props, ref) => {
+  let { href, children, ...rest } = props
+  return (
+    <Link href={href} ref={ref} {...rest}>
+      {children}    
+    </Link>
+  )
+})
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -12,6 +22,8 @@ const NavItem = ({item}) => {
     const buttonRef = useRef(null)
     const timeoutDuration = 150
     let timeout
+
+    let close = useClose()
   
     const closePopover = () => {
       return buttonRef.current?.dispatchEvent(
@@ -43,7 +55,7 @@ const NavItem = ({item}) => {
             {({ open }) => (
               <>
                 <div onMouseLeave={onMouseLeave.bind(null, open)}>
-                  <Popover.Button
+                  <PopoverButton
                     ref={buttonRef}
                     className={`
                       ${open ? "" : "text-opacity-90"}
@@ -57,7 +69,7 @@ const NavItem = ({item}) => {
                      ml-1 h-4 w-4 `}
                     aria-hidden="true"
                   />
-                </Popover.Button>
+                </PopoverButton>
                 <Transition
                   as={Fragment}
                   enter="transition ease-out duration-[50ms]"
@@ -67,7 +79,7 @@ const NavItem = ({item}) => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute z-10 w-48 px-4 mt-0 transform -translate-x-1/2 left-1/2 sm:px-0">
+                  <PopoverPanel className="absolute z-10 w-48 px-4 mt-0 transform -translate-x-1/2 left-1/2 sm:px-0">
                     <div
                       className="overflow-hidden shadow-lg ring-1 ring-black ring-opacity-5"
                       onMouseEnter={onMouseEnter.bind(null, open)}
@@ -75,7 +87,9 @@ const NavItem = ({item}) => {
                     >
                       <div className="relative grid gap-8 border dark:border-slate-700 bg-slate-50 dark:bg-slate-900 p-7 lg:grid-cols-1">
                         {item.submenu.map((subItem) => (
-                          <a
+                          <CloseButton
+                            onClick={() => close()}
+                            as={MyLink}
                             key={subItem.title}
                             href={subItem.href}
                             className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
@@ -85,9 +99,11 @@ const NavItem = ({item}) => {
                                 {subItem.title}
                               </p>
                             </div>
-                          </a>
+                          </CloseButton>
                         ))}
-                        <a
+                        <CloseButton
+                          onClick={() => close()}
+                          as={MyLink}
                           href={item.href}
                           className="flex items-center p-2 -m-3 transition duration-150 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring focus-visible:ring-opacity-50"
                         >
@@ -96,7 +112,7 @@ const NavItem = ({item}) => {
                               View All <span aria-hidden='true'>→</span>
                             </p>
                           </div>
-                        </a>
+                        </CloseButton>
                       </div>
                       {/*
                       <div className="relative border border-slate-500 bg-slate-700 p-7">
@@ -113,7 +129,7 @@ const NavItem = ({item}) => {
                       </div>
                       */}
                     </div>
-                  </Popover.Panel>
+                  </PopoverPanel>
                 </Transition>
                 </div>
               </>
@@ -121,11 +137,13 @@ const NavItem = ({item}) => {
           </Popover>
         </>
       ) : (
-        <Link
+        <CloseButton
+          onClick={() => close()}
+          as={MyLink}
           className="inline-flex items-center bg-transparent text-base font-medium py-2 focus:outline-none transition duration-150 ease-in-out hover:text-blue-700" 
           href={item.href}>
             {item.name}
-        </Link>
+        </CloseButton>
       )}
     </div>
   )

@@ -61,7 +61,7 @@ export default function Testimonials({ testimonials }) {
                 leaveFrom="opacity-100 rotate-0"
                 leaveTo="opacity-0 rotate-[60deg]"
               >
-                <Image className="relative top-11 left-1/2 -translate-x-1/2 rounded-full" src={testimonial.img} width={56} height={56} alt={testimonial.name} />
+                <Image className="relative top-11 left-1/2 -translate-x-1/2 rounded-full " src={testimonial.img} width={56} height={56} alt={testimonial.name} />
               </Transition>
             ))}
             
