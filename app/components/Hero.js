@@ -1,5 +1,5 @@
 'use client'
-/*
+
 import React from "react"
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -22,7 +22,7 @@ export default function Hero({bg, heading, subheading}) {
     >
       <motion.div style={{y}} className='absolute top-0 left-0 right-0 bottom-0' >
         <Image
-          src={bg}
+          src="/bg-image.jpg"
           alt="Hero Image"
           fill
           className='opacity-40 object-cover duration-700 ease-in-out'   
@@ -66,8 +66,8 @@ export default function Hero({bg, heading, subheading}) {
     </div>
   )
 }
-*/
 
+ /*
 import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -76,7 +76,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 export default function Hero({ heading, subheading }) {
   return (
     <div className='relative  flex  items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img'>
-      {/* Overlay */}
+      
       <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]' />
       <div className=" p-5 text-white z-[2] ">
         <motion.h1
@@ -116,3 +116,4 @@ export default function Hero({ heading, subheading }) {
     </div>
   )
 }
+*/
