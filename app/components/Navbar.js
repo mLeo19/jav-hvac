@@ -59,7 +59,7 @@ function classNames(...classes) {
 export default function Navbar() {
   return (
     <motion.div
-    className='left-1/2 bg-gray-50 dark:bg-gray-900 fixed z-50 w-full border-b dark:border-gray-700 border-gray-200'
+    className=' top-0 left-1/2 bg-gray-50 dark:bg-gray-900 fixed z-50 w-full border-b dark:border-gray-700 border-gray-200'
     initial={{ y: -100, x: "-50%", opacity: 0 }}
     animate={{ y: 0, x: "-50%", opacity: 1 }}
     >

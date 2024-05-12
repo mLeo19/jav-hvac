@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import Hero2 from './components/Hero2'
 import Services from './components/Services'
 import WhyChooseUs from './components/WhyChooseUs'
 import Testimonials from './components/Testimonials'
@@ -28,7 +29,7 @@ export default function Home() {
   ]
   return (
     <main>
-      <Hero heading='JAV Cooling' subheading='Team Up With HVAC Experts That Care About You' />
+      <Hero2 heading='JAV Cooling' subheading='Team Up With HVAC Experts That Care About You' />
       <Services />
       <WhyChooseUs />
       <Testimonials testimonials={testimonials} />
