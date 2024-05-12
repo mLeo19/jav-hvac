@@ -29,7 +29,7 @@ export default function Home() {
   ]
   return (
     <main>
-      <Hero2 heading='JAV Cooling' subheading='Team Up With HVAC Experts That Care About You' />
+      <Hero heading='JAV Cooling' subheading='Team Up With HVAC Experts That Care About You' />
       <Services />
       <WhyChooseUs />
       <Testimonials testimonials={testimonials} />

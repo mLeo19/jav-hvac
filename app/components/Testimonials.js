@@ -47,13 +47,13 @@ export default function Testimonials({ testimonials }) {
       {/* Testimonial image */}
       <div className="relative h-32">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-b before:from-blue-500/75 before:via-blue-500/5 before:via-25% before:to-blue-500/0 before:to-75% before:rounded-full before:-z-10">
-          <div className="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
+          <div className=" h-full [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
 
             {testimonials.map((testimonial, index) => (
               <Transition
                 key={index}
                 show={active === index}
-                className="absolute inset-0 h-full -z-10"
+                className="absolute inset-0 -z-10 h-[56px]"
                 enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
                 enterFrom="opacity-0 -rotate-[60deg]"
                 enterTo="opacity-100 rotate-0"
