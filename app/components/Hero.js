@@ -127,16 +127,16 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Hero({heading, subheading}) {
   return (
-    <div className='relative h-screen bg-black/60'>
+    <div className='relative h-screen '>
       <ImgWrapper>
         <Image
           src="/bg-image.jpg"
-          className="object-cover -z-10 "
+          className="object-cover -z-10 brightness-50"
           fill
           alt="Peacock with tail fanned out."
         />
       </ImgWrapper>
-      <div className=' absolute h-full w-full flex justify-center items-center z-10'>
+      <div className=' absolute h-full w-full flex justify-center items-center z-10 '>
         <div className=" relative flex flex-col justify-center items-center px-3 z-10">
           <motion.h1
             className="text-center text-5xl md:text-6xl text-white font-bold drop-shadow-lg"
@@ -181,8 +181,8 @@ const ImgWrapper = ({ children }) => {
   
   return (
     <>
-      <div style={{ position: "fixed", width: "100%", height: "100vh", top: "0", }} className='-z-10'>
-        <div className='relative h-screen w-full -z-10'>
+      <div style={{ position: "fixed", width: "100%", height: "100vh", top: "0", }} className='-z-10 '>
+        <div className='relative h-screen w-full -z-10 '>
           {children}       
         </div>
       </div>
